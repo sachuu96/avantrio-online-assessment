@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 
 import { connectToMongo } from "./config/db";
 import router from "./route/index";
+import { errorHandler } from "./middleware";
 
 dotenv.config();
 const app = express();
@@ -15,4 +16,5 @@ app.use(router);
 
 connectToMongo();
 
+app.use(errorHandler);
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

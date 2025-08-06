@@ -24,3 +24,14 @@ export const getInventory = async () => {
   const response = await axios.get(`${baseUrl}/inventories`);
   return response.data.inventory;
 };
+
+// emoji story teller
+export const createStory = async(data) => {
+  const response  = await axios.post(`${baseUrl}/stories`,data)
+  return response.data;
+}
+
+export const getStory = async() => {
+  const response  = await axios.get(`${baseUrl}/stories`)
+  return response.storyList;
+}

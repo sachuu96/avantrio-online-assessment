@@ -25,13 +25,13 @@
 // export default App;
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { InventoryList } from "./components/Inventory";
+import { Story } from "./components/Story";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<InventoryList />} />
+        <Route path="/" element={<Story />} />
       </Routes>
     </Router>
   );
